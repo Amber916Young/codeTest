@@ -72,5 +72,8 @@ for(int i =0;i<jsonArray.length();i++){
 
 
 ## GitHub Link
+【Maven】https://github.com/Amber916Young/codeTest
 
-https://github.com/Amber916Young/codeTest
+【Gradle】https://github.com/Amber916Young/codetestgradleversion
+
+**if Maven version can not run successfully, please try Gradle version and vice versa.**
