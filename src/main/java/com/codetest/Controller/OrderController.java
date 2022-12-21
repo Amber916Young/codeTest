@@ -24,16 +24,6 @@ import java.util.*;
 @RestController
 @RequestMapping("order")
 public class OrderController {
-    /**
-     * An order contains below attributes:
-     * ● Numeric ID (unique identifier of an order)
-     * ● Total price of the order (two decimal digits)
-     * ● Items in this order (each order should contain at least one product)
-     * An order item will contains below attributes:
-     * ● Name (string with max length of 50)
-     * ● Unit price (two decimal digits)
-     * ● Quantity (positive integer)
-     */
 
     @Autowired
     private SysOrderService orderService;
@@ -113,7 +103,7 @@ public class OrderController {
         updateParam.put("id",order_id);
         orderService.updateOrder(updateParam);
 
-        // delete preview item records
+        // delete the original item record(s)
         orderService.deleteOrder_item(order_id);
 
         // (1) insert new records, is the same logical of the create operation
